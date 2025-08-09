@@ -157,8 +157,11 @@ The Tableau dashboard features:
 * Top customers bar chart
 * Cohort retention heatmap to visualize long-term engagement
 
-📸 **Dashboard Preview**
-*Tableau Dashboard.png*
+
+## 📸 Dashboard Preview
+
+![Tableau Dashboard](Tableau%20Dashboard.png)
+
 
 ---
 
