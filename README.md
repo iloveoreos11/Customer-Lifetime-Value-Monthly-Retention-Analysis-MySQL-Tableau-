@@ -1,32 +1,41 @@
 
+---
 
-````markdown
 # 📈 Customer Lifetime Value & Retention Dashboard (MySQL + Tableau)
 
-Analyzing purchase behavior and retention trends for a retail customer base over a 12-month period.  
-This project calculates **Customer Lifetime Value (CLV)**, identifies **top-spending customers**, and maps **cohort-based retention** to help businesses improve loyalty and revenue.
+A mid-sized **online retail company** wants to understand which customers drive the most value and how retention changes over time.
+The marketing team has noticed that **repeat purchases drop significantly after the first few months** and wants data-backed insights to guide loyalty campaigns and re-engagement offers.
+
+I've been tasked with:
+
+* Calculating **Customer Lifetime Value (CLV)** for each customer
+* Identifying **top-spending customers**
+* Mapping **cohort-based retention trends** over 12 months
+* Providing **actionable recommendations** to boost loyalty and reduce churn
+
+This project uses **MySQL** for data processing and **Tableau** for visualization to deliver a clear, interactive dashboard that supports strategic decision-making.
 
 ---
 
 ## 📊 Project Overview
 
-Customer retention and high-value client management are critical for sustainable growth.  
+Customer retention and high-value client management are critical for sustainable growth.
 This project uses **SQL** to extract and process transactional data, then visualizes it in **Tableau** to:
 
-- Pinpoint top-spending customers
-- Track monthly retention across customer cohorts
-- Identify drop-off points and loyalty patterns
-- Support targeted marketing and re-engagement strategies
+* Pinpoint top-spending customers
+* Track monthly retention across customer cohorts
+* Identify drop-off points and loyalty patterns
+* Support targeted marketing and re-engagement strategies
 
 ---
 
 ## 🎯 Business Goals
 
-- Calculate lifetime value for each customer
-- Identify top 10 customers by revenue
-- Group customers into cohorts based on first purchase month
-- Track monthly retention and churn across cohorts
-- Provide actionable recommendations for improving retention
+* Calculate lifetime value for each customer
+* Identify top 10 customers by revenue
+* Group customers into cohorts based on first purchase month
+* Track monthly retention and churn across cohorts
+* Provide actionable recommendations for improving retention
 
 ---
 
@@ -34,28 +43,29 @@ This project uses **SQL** to extract and process transactional data, then visual
 
 The dataset simulates one year of retail transactions for 100 customers.
 
-| Column        | Description |
-|---------------|-------------|
-| `order_id`    | Unique order identifier |
-| `customer_id` | Unique customer identifier |
-| `order_date`  | Date of purchase |
-| `quantity`    | Units purchased |
-| `price`       | Price per unit |
+| Column        | Description                   |
+| ------------- | ----------------------------- |
+| `order_id`    | Unique order identifier       |
+| `customer_id` | Unique customer identifier    |
+| `order_date`  | Date of purchase              |
+| `quantity`    | Units purchased               |
+| `price`       | Price per unit                |
 | `region`      | Geographic region of customer |
 
 ---
 
 ## 💻 Tools Used
 
-- **MySQL** – Data cleaning, aggregation, and cohort analysis
-- **Tableau** – KPI cards, bar charts, and heatmaps
-- **CSV/Excel** – Data storage and export
+* **MySQL** – Data cleaning, aggregation, and cohort analysis
+* **Tableau** – KPI cards, bar charts, and heatmaps
+* **CSV/Excel** – Data storage and export
 
 ---
 
 ## 🧼 Step 1: Data Preparation
 
 **Database & Table Creation**
+
 ```sql
 CREATE DATABASE clv_project;
 USE clv_project;
@@ -68,7 +78,7 @@ CREATE TABLE orders (
     price DECIMAL(10,2),
     region VARCHAR(100)
 );
-````
+```
 
 **Lifetime Value Calculation**
 
@@ -128,9 +138,14 @@ ORDER BY cohort_month, active_month;
 
 ## 📌 Step 3: Key Insights
 
-✅ **High-Value Customers** – A small group of customers contribute disproportionately to total revenue.
-⚠️ **Retention Drop** – Significant customer drop-off after 3–4 months in most cohorts.
-🔄 **Strong Cohorts** – Certain early cohorts maintain higher retention — potential loyalty drivers worth replicating.
+✅ **High-Value Customers**
+A small group of customers contribute disproportionately to total revenue.
+
+⚠️ **Retention Drop**
+Significant customer drop-off after 3–4 months in most cohorts.
+
+🔄 **Strong Cohorts**
+Certain early cohorts maintain higher retention — potential loyalty drivers worth replicating.
 
 ---
 
@@ -138,20 +153,28 @@ ORDER BY cohort_month, active_month;
 
 The Tableau dashboard features:
 
-* **KPI section** for quick performance overview
-* **Top customers bar chart**
-* **Cohort retention heatmap** to visualize long-term engagement
+* KPI section for quick performance overview
+* Top customers bar chart
+* Cohort retention heatmap to visualize long-term engagement
 
 📸 **Dashboard Preview**
-![Tableau Dashboard](Tableau%20Dashboard.png)
+*Tableau Dashboard.png*
 
 ---
 
 ## 📝 Step 5: Recommendations
 
-**Retention Strategy** – Launch re-engagement campaigns at months 2–3 to prevent churn.
-**Loyalty Programs** – Incentivize repeat purchases for top cohorts with special offers.
-**Data Monitoring** – Track retention monthly to quickly detect negative shifts.
+**Retention Strategy**
+
+* Launch re-engagement campaigns at months 2–3 to prevent churn.
+
+**Loyalty Programs**
+
+* Incentivize repeat purchases for top cohorts with special offers.
+
+**Data Monitoring**
+
+* Track retention monthly to quickly detect negative shifts.
 
 ---
 
@@ -162,8 +185,5 @@ The Tableau dashboard features:
 * `Tableau Dashboard.png` – Tableau dashboard visual
 * `README.md` – Full project write-up
 
-```
-
 ---
 
-```
