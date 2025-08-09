@@ -1,3 +1,14 @@
+Yes — that’s the same structure I gave you earlier, just pasted without the code blocks and formatting in a few places.
+
+If you want it to **look clean on GitHub** like your other write-ups, you’ll want to:
+
+* Keep the SQL queries inside triple backticks (\`\`\`) so they format properly.
+* Make sure each section (🔍 Step 2, 📌 Step 3, etc.) is on its own line with headings or bullet points for clarity.
+* Add the image link for your screenshot so GitHub actually displays it.
+
+Here’s your version **cleaned up and GitHub-ready**:
+
+````markdown
 # 📈 Customer Lifetime Value & Retention Dashboard (MySQL + Tableau)
 
 Analyzing purchase behavior and retention trends for a retail customer base over a 12-month period.  
@@ -65,7 +76,11 @@ CREATE TABLE orders (
     price DECIMAL(10,2),
     region VARCHAR(100)
 );
-Lifetime Value Calculation
+````
+
+**Lifetime Value Calculation**
+
+```sql
 SELECT 
     customer_id,
     SUM(quantity * price) AS lifetime_value,
@@ -75,7 +90,11 @@ SELECT
 FROM orders
 GROUP BY customer_id
 ORDER BY lifetime_value DESC;
-Cohort Retention Table
+```
+
+**Cohort Retention Table**
+
+```sql
 WITH first_orders AS (
     SELECT customer_id, MIN(order_date) AS first_order_date
     FROM orders
@@ -92,38 +111,67 @@ SELECT cohort_month, active_month, COUNT(DISTINCT customer_id) AS active_custome
 FROM cohort_activity
 GROUP BY cohort_month, active_month
 ORDER BY cohort_month, active_month;
-🔍 Step 2: Data Analysis & Visualization
-KPI Cards
-Total Customers: 100
-Max CLV: 6,793
-Average CLV: 3,217
-Bar Chart
-Top 10 customers ranked by lifetime value
-Cohort Heatmap
-Retention over time by cohort month
-Drop-off patterns visible after months 3–4
-📌 Step 3: Key Insights
-✅ High-Value Customers
-A small group of customers contribute disproportionately to total revenue.
-⚠️ Retention Drop
-Significant customer drop-off after 3–4 months in most cohorts.
-🔄 Strong Cohorts
-Certain early cohorts maintain higher retention — potential loyalty drivers worth replicating.
-📈 Step 4: Dashboard
+```
+
+---
+
+## 🔍 Step 2: Data Analysis & Visualization
+
+**KPI Cards**
+
+* Total Customers: 100
+* Max CLV: 6,793
+* Average CLV: 3,217
+
+**Bar Chart**
+
+* Top 10 customers ranked by lifetime value
+
+**Cohort Heatmap**
+
+* Retention over time by cohort month
+* Drop-off patterns visible after months 3–4
+
+---
+
+## 📌 Step 3: Key Insights
+
+✅ **High-Value Customers** – A small group of customers contribute disproportionately to total revenue.
+⚠️ **Retention Drop** – Significant customer drop-off after 3–4 months in most cohorts.
+🔄 **Strong Cohorts** – Certain early cohorts maintain higher retention — potential loyalty drivers worth replicating.
+
+---
+
+## 📈 Step 4: Dashboard
+
 The Tableau dashboard features:
-KPI section for quick performance overview
-Top customers bar chart
-Cohort retention heatmap to visualize long-term engagement
-📸 Dashboard Preview
-📝 Step 5: Recommendations
-Retention Strategy
-Launch re-engagement campaigns at months 2–3 to prevent churn.
-Loyalty Programs
-Incentivize repeat purchases for top cohorts with special offers.
-Data Monitoring
-Track retention monthly to quickly detect negative shifts.
-📂 Files Included
-clv_analysis.sql – SQL queries for CLV & cohort analysis
-orders.csv – Sample transaction dataset
-Tableau Dashboard.png – Tableau dashboard visual
-README.md – Full project write-up
+
+* **KPI section** for quick performance overview
+* **Top customers bar chart**
+* **Cohort retention heatmap** to visualize long-term engagement
+
+📸 **Dashboard Preview**
+![Tableau Dashboard](Tableau%20Dashboard.png)
+
+---
+
+## 📝 Step 5: Recommendations
+
+**Retention Strategy** – Launch re-engagement campaigns at months 2–3 to prevent churn.
+**Loyalty Programs** – Incentivize repeat purchases for top cohorts with special offers.
+**Data Monitoring** – Track retention monthly to quickly detect negative shifts.
+
+---
+
+## 📂 Files Included
+
+* `clv_analysis.sql` – SQL queries for CLV & cohort analysis
+* `orders.csv` – Sample transaction dataset
+* `Tableau Dashboard.png` – Tableau dashboard visual
+* `README.md` – Full project write-up
+
+```
+
+---
+
+```
