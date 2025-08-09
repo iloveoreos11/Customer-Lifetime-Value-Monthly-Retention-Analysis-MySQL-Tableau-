@@ -1,12 +1,4 @@
-Yes — that’s the same structure I gave you earlier, just pasted without the code blocks and formatting in a few places.
 
-If you want it to **look clean on GitHub** like your other write-ups, you’ll want to:
-
-* Keep the SQL queries inside triple backticks (\`\`\`) so they format properly.
-* Make sure each section (🔍 Step 2, 📌 Step 3, etc.) is on its own line with headings or bullet points for clarity.
-* Add the image link for your screenshot so GitHub actually displays it.
-
-Here’s your version **cleaned up and GitHub-ready**:
 
 ````markdown
 # 📈 Customer Lifetime Value & Retention Dashboard (MySQL + Tableau)
