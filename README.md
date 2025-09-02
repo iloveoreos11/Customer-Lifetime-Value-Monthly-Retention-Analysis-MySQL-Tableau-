@@ -167,17 +167,31 @@ The Tableau dashboard features:
 
 ## 📝 Step 5: Recommendations
 
-**Retention Strategy**
 
-* Launch re-engagement campaigns at months 2–3 to prevent churn.
+**1. Retention Strategy – Address Drop-Off at Months 2–3**  
+- **Problem:** The cohort heatmap showed significant drop-off after 3–4 months.  
+- **Recommendation:** Launch **re-engagement campaigns earlier (month 2)** to prevent churn.  
+  - Offer **£5 discount vouchers** for customers inactive for 30 days.  
+  - Send **“We miss you” emails** with personalised product bundles.  
+- **Impact:** Could retain an extra **10–15% of at-risk customers**, raising overall retention and protecting recurring revenue.  
 
-**Loyalty Programs**
+**2. Loyalty Programs – Incentivise High-Value Customers**  
+- **Problem:** A small group of customers contributed disproportionately to revenue (max CLV: £6,793).  
+- **Recommendation:**  
+  - Introduce **tiered loyalty rewards** (e.g., free shipping after 5 orders, VIP early access to sales).  
+  - Provide **personalised offers** for high-value segments based on past purchasing habits.  
+- **Impact:** Increases repeat purchase frequency and strengthens customer lifetime value.  
 
-* Incentivize repeat purchases for top cohorts with special offers.
+**3. Cohort Replication – Learn from Strong Cohorts**  
+- **Problem:** Some early cohorts maintained stronger long-term retention.  
+- **Recommendation:** Analyse what drove their loyalty (e.g., seasonal promotions, acquisition channel, product mix) and replicate those strategies in future campaigns.  
+- **Impact:** Scaling proven onboarding and marketing approaches could boost new cohort retention by **5–8%**.  
 
-**Data Monitoring**
+**4. Data Monitoring – Ongoing Tracking**  
+- **Problem:** Retention issues are only visible after several months.  
+- **Recommendation:** Automate a **monthly SQL + Tableau dashboard update** to monitor retention in real time.  
+- **Impact:** Enables earlier interventions, cutting churn lag and sustaining retention improvements over time.  
 
-* Track retention monthly to quickly detect negative shifts.
 
 ---
 
